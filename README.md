@@ -1,13 +1,87 @@
-# GLPI Install Script for Debian/Ubuntu
-**Overview**
+## GLPI Installation Script for Debian
+This script automates the installation and configuration of GLPI on Debian servers with Apache and MariaDB. It simplifies the setup process by performing all necessary tasks, including configuring PHP, setting up the database, and configuring GLPI with Apache.
 
-This script automates the installation and configuration of GLPI (Gestionnaire Libre de Parc Informatique) on Debian and Ubuntu systems. GLPI is a powerful open-source IT asset management and helpdesk solution. This script simplifies the process by handling the setup of required packages, configuration of the web server, database setup, and GLPI installation.
+## Overview
+The script performs the following tasks:
 
-**Features**
+1. **Detects PHP Version** - Automatically detects and adjusts the PHP configuration.
+2. **Retrieves Latest GLPI Version** - Downloads the latest version from GitHub.
+3. **Configures Database** - Creates and configures a database for GLPI.
+4. **Sets Up GLPI Environment** - Downloads, extracts, and configures GLPI.
+5. **Configures Apache** - Sets up the Apache virtual host for GLPI.
+6. **Creates Required Files** - Generates essential configuration files.
 
-- **Automated Installation:** Installs and configures Apache, PHP, MariaDB, and other dependencies.
-- **GLPI Download and Setup:** Automatically downloads the latest GLPI release, extracts it, and sets the correct permissions.
-- **Apache Configuration:** Configures Apache for both HTTP and HTTPS, including SSL setup with Certbot for secure connections.
-- **Database Configuration:** Sets up a MariaDB database and user for GLPI with the necessary privileges.
-- **PHP Configuration:** Modifies PHP settings in php.ini to improve security and performance.
-- **GLPI Configuration:** Configures GLPI to use specific directories for configuration, data, and logs.
+## Prerequisites
+Ensure your Debian server meets the following requirements:
+
+- Debian 10 (Buster) or higher
+- Apache
+- MariaDB
+- PHP (version detected automatically)
+
+## Installation Steps
+
+**1. Clone the Repository:**
+
+```
+git clone <REPOSITORY_URL>
+cd <REPOSITORY_DIRECTORY>
+```
+
+**2. Make the Script Executable:**
+
+```
+chmod +x install_glpi.sh
+```
+
+**3. Run the Script:**
+
+```
+sudo ./install_glpi.sh
+```
+
+**4. Follow the On-Screen Prompts:**
+
+The script will prompt for database passwords and display progress information. Enter the required information as prompted.
+
+## GLPI Configuration
+During the installation, the script sets up GLPI with the following database configuration:
+
+- SQL Server: localhost (MariaDB or MySQL)
+- SQL User: glpi
+- SQL Password: The password you provide during the script execution when prompted for the database user.
+
+## Post-Installation
+**1. Access the GLPI Web Interface:**
+After the installation completes, you can access GLPI at:
+
+```
+http://<YOUT_LOCAL_IP>
+```
+
+**2. Remove Installation Script for Security:**
+For security reasons, please remove the installation script file install/install.php from your server. This file is no longer needed and should be deleted to prevent unauthorized access.
+
+Run the following command to remove the file:
+
+```
+rm -rf /var/www/html/glpi/install/install.php
+```
+
+## Customization
+- **Script Configuration:** You can modify the script to adjust paths or configurations according to your environment.
+- **GLPI Directory:** By default, GLPI will be installed in /var/www/html/glpi. Adjust this path in the script if needed.
+
+## Troubleshooting
+- **Error Messages:** The script provides error messages for common issues such as missing files or failed operations.
+- **Logs:** Check the Apache and GLPI logs for additional information if you encounter problems.
+
+## Contributing
+Contributions are welcome! To contribute:
+
+## Fork the repository.
+Make your changes.
+Submit a pull request with a description of your changes.
+
+## License
+This project is licensed under the MIT License.
