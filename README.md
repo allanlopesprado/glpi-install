@@ -12,7 +12,7 @@ The script performs the following tasks:
 6. **Creates Required Files** - Generates essential configuration files.
 
 ## Prerequisites
-Ensure YOUR Debian server meets the following requirements:
+Ensure your Debian server meets the following requirements:
 
 - Debian 10 (Buster) or higher
 - Apache
