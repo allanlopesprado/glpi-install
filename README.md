@@ -56,7 +56,7 @@ During the installation, the script sets up GLPI with the following database con
 After the installation completes, you can access GLPI at:
 
 ```
-http://<YOUT_LOCAL_IP>
+http://<your_LOCAL_IP>
 ```
 
 **2. Remove Installation Script for Security:**
