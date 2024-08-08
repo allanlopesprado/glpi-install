@@ -47,9 +47,13 @@ The script will prompt for database passwords and display progress information. 
 ## GLPI Configuration
 During the installation, the script sets up GLPI with the following database configuration:
 
-- SQL Server: localhost (MariaDB or MySQL)
+```
+- SQL Server: localhost
 - SQL User: glpi
-- SQL Password: The password you provide during the script execution when prompted for the database user.
+- SQL Password: your password
+```
+**The password you provided during script execution when prompted for the glpi database user.**
+
 
 ## Post-Installation
 **1. Access the GLPI Web Interface:**
