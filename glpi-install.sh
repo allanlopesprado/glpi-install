@@ -209,9 +209,6 @@ chmod -R 755 $CONFIG_DIR || erro "Não foi possível definir as permissões do d
 chmod -R 755 $VAR_DIR || erro "Não foi possível definir as permissões do diretório de dados."
 chmod -R 755 $LOG_DIR || erro "Não foi possível definir as permissões do diretório de logs."
 
-# Remover o arquivo de instalação
-rm -f $GLPI_DIR/install/install.php || echo "Não foi possível remover o arquivo install.php."
-
 # Reiniciar o Apache para aplicar todas as mudanças
 systemctl restart apache2 || erro "Não foi possível reiniciar o Apache."
 
