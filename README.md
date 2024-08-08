@@ -52,7 +52,7 @@ During the installation, the script sets up GLPI with the following database con
 - SQL User: glpi
 - SQL Password: your password
 ```
-**The password you provided during script execution when prompted for the glpi database user.**
+**The password you provided when the script prompted for the GLPI database user during execution.**
 
 
 ## Post-Installation
