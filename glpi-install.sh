@@ -102,6 +102,7 @@ mysql_tzinfo_to_sql /usr/share/zoneinfo | mysql -u root -p$DB_ROOT_PASSWORD mysq
 # Configuração do banco de dados
 mysql -uroot -p$DB_ROOT_PASSWORD -e "CREATE DATABASE IF NOT EXISTS $DB_NAME CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;" || erro "Não foi possível criar o banco de dados."
 mysql -uroot -p$DB_ROOT_PASSWORD -e "GRANT ALL PRIVILEGES ON $DB_NAME.* TO 'glpi'@'localhost' IDENTIFIED BY '$DB_PASSWORD';" || erro "Não foi possível conceder permissões ao usuário glpi."
+mysql -uroot -p$DB_ROOT_PASSWORD -e "GRANT SELECT ON mysql.time_zone_name TO 'glpi'@'localhost';" || erro "Não foi possível conceder permissões de SELECT na tabela time_zone_name para o usuário glpi."
 mysql -uroot -p$DB_ROOT_PASSWORD -e "FLUSH PRIVILEGES;" || erro "Não foi possível atualizar as permissões do banco de dados."
 
 # Download do GLPI
@@ -209,7 +210,7 @@ chmod -R 755 $VAR_DIR || erro "Não foi possível definir as permissões do dire
 chmod -R 755 $LOG_DIR || erro "Não foi possível definir as permissões do diretório de logs."
 
 # Remover o arquivo de instalação
-# rm -f $GLPI_DIR/install/install.php || echo "Não foi possível remover o arquivo install.php."
+rm -f $GLPI_DIR/install/install.php || echo "Não foi possível remover o arquivo install.php."
 
 # Reiniciar o Apache para aplicar todas as mudanças
 systemctl restart apache2 || erro "Não foi possível reiniciar o Apache."
