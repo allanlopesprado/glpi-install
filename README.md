@@ -76,12 +76,9 @@ rm -rf /var/www/html/glpi/install/install.php
 - **Error Messages:** The script provides error messages for common issues such as missing files or failed operations.
 - **Logs:** Check the Apache and GLPI logs for additional information if you encounter problems.
 
-## Contributing
-Contributions are welcome! To contribute:
-
-## Fork the repository.
-Make your changes.
-Submit a pull request with a description of your changes.
-
 ## License
-This project is licensed under the MIT License.
+
+[![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
+
+This software is licensed under the terms of GPLv2+, see LICENSE file for
+details.
