@@ -12,7 +12,7 @@ The script performs the following tasks:
 6. **Creates Required Files** - Generates essential configuration files.
 
 ## Prerequisites
-Ensure your Debian server meets the following requirements:
+Ensure YOUR Debian server meets the following requirements:
 
 - Debian 10 (Buster) or higher
 - Apache
@@ -56,11 +56,11 @@ During the installation, the script sets up GLPI with the following database con
 After the installation completes, you can access GLPI at:
 
 ```
-http://<your_LOCAL_IP>
+http://<YOUR_LOCAL_IP>
 ```
 
 **2. Remove Installation Script for Security:**
-For security reasons, please remove the installation script file install/install.php from your server. This file is no longer needed and should be deleted to prevent unauthorized access.
+For security reasons, please remove the installation script file install/install.php from YOUR server. This file is no longer needed and should be deleted to prevent unauthorized access.
 
 Run the following command to remove the file:
 
@@ -69,7 +69,7 @@ rm -rf /var/www/html/glpi/install/install.php
 ```
 
 ## Customization
-- **Script Configuration:** You can modify the script to adjust paths or configurations according to your environment.
+- **Script Configuration:** You can modify the script to adjust paths or configurations according to YOUR environment.
 - **GLPI Directory:** By default, GLPI will be installed in /var/www/html/glpi. Adjust this path in the script if needed.
 
 ## Troubleshooting
