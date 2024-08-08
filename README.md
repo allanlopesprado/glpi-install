@@ -31,13 +31,13 @@ cd glpi-install
 **2. Make the Script Executable:**
 
 ```
-chmod +x install_glpi.sh
+chmod +x install-glpi.sh
 ```
 
 **3. Run the Script:**
 
 ```
-sudo ./install_glpi.sh
+sudo ./install-glpi.sh
 ```
 
 **4. Follow the On-Screen Prompts:**
