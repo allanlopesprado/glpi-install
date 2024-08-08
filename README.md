@@ -60,7 +60,7 @@ http://<YOUR_LOCAL_IP>
 ```
 
 **2. Remove Installation Script for Security:**
-For security reasons, please remove the installation script file install/install.php from YOUR server. This file is no longer needed and should be deleted to prevent unauthorized access.
+For security reasons, please remove the installation script file install/install.php from your server. This file is no longer needed and should be deleted to prevent unauthorized access.
 
 Run the following command to remove the file:
 
@@ -69,7 +69,7 @@ rm -rf /var/www/html/glpi/install/install.php
 ```
 
 ## Customization
-- **Script Configuration:** You can modify the script to adjust paths or configurations according to YOUR environment.
+- **Script Configuration:** You can modify the script to adjust paths or configurations according to your environment.
 - **GLPI Directory:** By default, GLPI will be installed in /var/www/html/glpi. Adjust this path in the script if needed.
 
 ## Troubleshooting
