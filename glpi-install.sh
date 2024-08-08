@@ -40,7 +40,7 @@ ajustar_php_ini() {
 
   # Modificar as configurações
   sed -i -e 's/^;*\s*session.cookie_httponly\s*=.*/session.cookie_httponly = 1/' \
-         -e 's/^;*\s*session.cookie_secure\s*=.*/session.cookie_secure = 1/' \
+         -e 's/^;*\s*session.cookie_secure\s*=.*/session.cookie_secure = 0/' \
          -e 's/^;*\s*session.cookie_samesite\s*=.*/session.cookie_samesite = Lax/' "$PHP_INI_PATH" || erro "Não foi possível atualizar o php.ini."
 }
 
