@@ -40,7 +40,7 @@ ajustar_php_ini() {
 
   # Modificar as configurações
   sed -i -e 's/^;*\s*session.cookie_httponly\s*=.*/session.cookie_httponly = 1/' \
-         -e 's/^;*\s*session.cookie_secure\s*=.*/session.cookie_secure = 0/' \
+         -e 's/^;*\s*session.cookie_secure\s*=.*/session.cookie_secure = 1/' \
          -e 's/^;*\s*session.cookie_samesite\s*=.*/session.cookie_samesite = Lax/' "$PHP_INI_PATH" || erro "Não foi possível atualizar o php.ini."
 }
 
@@ -209,7 +209,7 @@ chmod -R 755 $VAR_DIR || erro "Não foi possível definir as permissões do dire
 chmod -R 755 $LOG_DIR || erro "Não foi possível definir as permissões do diretório de logs."
 
 # Remover o arquivo de instalação
-rm -f $GLPI_DIR/install/install.php || echo "Não foi possível remover o arquivo install.php."
+# rm -f $GLPI_DIR/install/install.php || echo "Não foi possível remover o arquivo install.php."
 
 # Reiniciar o Apache para aplicar todas as mudanças
 systemctl restart apache2 || erro "Não foi possível reiniciar o Apache."
