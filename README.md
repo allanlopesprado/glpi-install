@@ -24,8 +24,8 @@ Ensure your Debian server meets the following requirements:
 **1. Clone the Repository:**
 
 ```
-git clone <REPOSITORY_URL>
-cd <REPOSITORY_DIRECTORY>
+git clone [<REPOSITORY_URL>](https://github.com/allanlopesprado/glpi-install)
+cd glpi-install
 ```
 
 **2. Make the Script Executable:**
