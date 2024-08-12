@@ -1,16 +1,6 @@
 ## GLPI Installation Script for Debian
 This script automates the installation and configuration of GLPI on Debian servers with Apache and MariaDB. It simplifies the setup process by performing all necessary tasks, including configuring PHP, setting up the database, and configuring GLPI with Apache.
 
-## Overview
-The script performs the following tasks:
-
-1. **Detects PHP Version** - Automatically detects and adjusts the PHP configuration.
-2. **Retrieves Latest GLPI Version** - Downloads the latest version from GitHub.
-3. **Configures Database** - Creates and configures a database for GLPI.
-4. **Sets Up GLPI Environment** - Downloads, extracts, and configures GLPI.
-5. **Configures Apache** - Sets up the Apache virtual host for GLPI.
-6. **Creates Required Files** - Generates essential configuration files.
-
 ## Prerequisites
 Ensure your Debian server meets the following requirements:
 
